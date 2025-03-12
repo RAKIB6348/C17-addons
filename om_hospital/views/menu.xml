@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+    <menuitem id="menu_hospital_root"
+              name="Hospital"
+              sequence="0"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="menu_frontdesk"
+              name="Front Desk"
+              parent="menu_hospital_root"
+              sequence="0"/>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="menu_patients"
+              name="Patients"
+              parent="menu_frontdesk"
+              action="action_hospital_patient"
+              sequence="0"/>
+
+    <menuitem id="menu_patients_readonly"
+              name="View Patients"
+              parent="menu_frontdesk"
+              action="action_hospital_patient_readonly"
+              sequence="1"/>
+
+</odoo>
